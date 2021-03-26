@@ -14,7 +14,9 @@ import { MatSidenavModule } from'@angular/material/sidenav'
 import { MatCardModule } from'@angular/material/card'
 import { MatListModule } from'@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
-import { ProdutoComponent } from './views/produto/produto.component'
+import { ProdutoComponent } from './views/produto/produto.component';
+import { ProdutoCreateComponent } from './components/produto/produto-create/produto-create.component'
+import { MatButtonModule } from'@angular/material/button'
 
 
 @NgModule({
@@ -25,6 +27,7 @@ import { ProdutoComponent } from './views/produto/produto.component'
     NavComponent,
     HomeComponent,
     ProdutoComponent,
+    ProdutoCreateComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,8 @@ import { ProdutoComponent } from './views/produto/produto.component'
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
