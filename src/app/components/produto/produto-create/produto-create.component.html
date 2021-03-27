@@ -1,3 +1,31 @@
+<mat-card>
+    <mat-card-title>
+        Cadastro de Produto
+    </mat-card-title>
+    <form>
+        <mat-form-field appearance="fill">
+            <mat-label>Nome</mat-label>
+            <input matInput placeholder="Nome do produto" [(ngModel)]="produto.nome" name="nome" class="inputNome">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Marca</mat-label>
+            <input matInput placeholder="Marca do produto" [(ngModel)]="produto.marca" name="marca">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill"> 
+            <mat-label>Codigo de barras</mat-label>
+            <input matInput placeholder="Código de barras" [(ngModel)]="produto.codigoBarra" name="codigoBarra" type="number">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Quantidade</mat-label>
+            <input matInput placeholder="Quantidade" [(ngModel)]="produto.quantidade" name="quantidade" type="number">
+        </mat-form-field>
+    </form>
+</mat-card>
+
+
 <button mat-raised-button (click)="criarProduto()" color="accent">
     Salvar
 </button>
