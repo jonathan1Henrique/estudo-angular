@@ -23,8 +23,8 @@ export class ProdutoService {
     })
   }
 
-  criar(produto : Produto): Observable<Produto>{
-    return this.http.post<Produto>(this.baseUrl, produto);
+  criar(produto : Produto): Observable<any>{
+    return this.http.post<any>(this.baseUrl, produto);
   }
   
 }
