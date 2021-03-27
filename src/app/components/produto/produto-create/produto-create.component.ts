@@ -1,3 +1,4 @@
+import { Produto } from './../produto.model';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProdutoService } from '../produto.service';
@@ -9,14 +10,24 @@ import { ProdutoService } from '../produto.service';
 })
 export class ProdutoCreateComponent implements OnInit {
 
-  constructor(private produtoService: ProdutoService,
-    private router : Router) { }
+  produto: Produto = {
+    nome: "Lancer",
+    marca: "Mit",
+    codigoBarra: 1234,
+    quantidade: 34
+
+  };
+
+  constructor(private produtoService: ProdutoService,private router : Router) { }
 
   ngOnInit(): void {
   }
 
   criarProduto(): void{
-    this.produtoService.showMessage('Produto criado pode crê ?');
+    this.produtoService.criar(this.produto).subscribe(() =>{
+      this.produtoService.showMessage('Produto criado pode crê ?');
+      this.router.navigate(['/produto']);
+    })
   }
 
   cancelar(): void{
