@@ -10,13 +10,7 @@ import { Produto } from './../produto.model';
 })
 export class ProdutoCreateComponent implements OnInit {
 
-  produto: Produto = {
-    nome: '',
-    marca: '',
-    codigoBarra: 0,
-    quantidade: 0
-
-  };
+  produto = new Produto(); 
 
   constructor(private produtoService: ProdutoService,private router : Router) { }
 
