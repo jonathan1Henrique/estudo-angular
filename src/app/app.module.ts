@@ -24,6 +24,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
 import { HttpClientModule } from '@angular/common/http';
+import { ProdutoReadComponent } from './components/produto/produto-read/produto-read.component';
 
 
 
@@ -36,6 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     ProdutoComponent,
     ProdutoCreateComponent,
+    ProdutoReadComponent,
   ],
   imports: [
     BrowserModule,
